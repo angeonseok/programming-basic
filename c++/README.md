@@ -1,24 +1,26 @@
 # C++ Basic
 
-이 디렉토리는 **C++14 기준**으로 정리한 C++ 문법 노트입니다.
+이 디렉토리는 **C++17 기준**으로 정리한 C++ 문법 노트입니다.
 
 **실제 코딩테스트 활용**에 초점을 맞춰, 자주 쓰이는 문법과 STL을 특히 자세히 정리했습니다. 빠른 입출력, 오버플로 회피, 정렬 비교 기준, 이분 탐색, 우선순위 큐, 격자 탐색처럼 실전에서 매번 나오는 패턴을 중심으로 구성합니다.
 
-각 문서는 **C++14 기준**에서 개념을 빠르게 확인하고 예제 코드로 복습할 수 있도록 구성합니다. (구조적 바인딩·CTAD·`std::gcd`·`std::clamp` 등 C++17 이상 문법은 배제)
+각 문서는 **C++17 기준**에서 개념을 빠르게 확인하고 예제 코드로 복습할 수 있도록 구성합니다. 구조적 바인딩, 초기화문이 있는 `if`, CTAD, `std::gcd`·`std::lcm`·`std::clamp`처럼 코딩테스트와 실무에서 바로 쓰이는 C++17 문법을 포함하며, 해당 부분에는 **(C++17)** 표시를 붙였습니다.
+
+> ⚠️ 채점 환경이 C++14 이하만 지원하면 **(C++17)** 표시가 붙은 문법은 컴파일되지 않습니다. 제출 전에 언어 버전 설정(`-std=c++17`)을 확인하세요.
 
 ## 문서 구성
 
 | # | 문서 | 핵심 내용 |
 |---|------|-----------|
 | 01 | [기초 문법](./01.cpp_basics.md) | 빠른 입출력, 자료형, **오버플로(long long)**, 연산자, 비트 연산 |
-| 02 | [제어문](./02.cpp_control_flow.md) | 조건문, 반복문, 범위 기반 for, **격자 순회·방향 배열(dx/dy)** |
-| 03 | [함수](./03.cpp_functions.md) | 참조 전달(`const&`), 람다, **재귀·DFS·백트래킹**, 전역 배열 |
-| 04 | [문자열](./04.cpp_string.md) | `string`, **문자 산술**, getline·버퍼, **stringstream 파싱** |
-| 05 | [STL 컨테이너](./05.cpp_stl_containers.md) | **vector·map·set·stack·queue·priority_queue**, BFS 뼈대 |
-| 06 | [STL 알고리즘](./06.cpp_stl_algorithm.md) | **sort·비교 기준**, **이분 탐색**, 순열, 누적합, `__gcd` |
+| 02 | [제어문](./02.cpp_control_flow.md) | 조건문, 초기화문 `if`, 반복문, 범위 기반 for, **격자 순회·방향 배열(dx/dy)** |
+| 03 | [함수](./03.cpp_functions.md) | 참조 전달(`const&`), 람다, **재귀·DFS·백트래킹**, 여러 값 반환, `optional` |
+| 04 | [문자열](./04.cpp_string.md) | `string`, **문자 산술**, getline·버퍼, **stringstream 파싱**, `string_view` |
+| 05 | [STL 컨테이너](./05.cpp_stl_containers.md) | **vector·map·set·stack·queue·priority_queue**, **구조적 바인딩**, BFS 뼈대 |
+| 06 | [STL 알고리즘](./06.cpp_stl_algorithm.md) | **sort·비교 기준**, **이분 탐색**, 순열, 누적합, `gcd`·`lcm`·`clamp` |
 | 07 | [포인터·메모리](./07.cpp_pointer_memory.md) | 포인터, 참조, 스택 vs 힙, RAII (개념 위주) |
 | 08 | [객체 지향](./08.cpp_oop.md) | **struct·정렬 기준(operator<)**, 클래스, 상속, 다형성 |
-| 09 | [템플릿](./09.cpp_template.md) | 함수·클래스 템플릿, STL과의 관계 |
+| 09 | [템플릿](./09.cpp_template.md) | 함수·클래스 템플릿, CTAD, `if constexpr`, fold expression |
 | 10 | [예외 처리](./10.cpp_exception.md) | try/catch/throw, **런타임 에러(RE) 원인** |
 
 ## 코딩테스트 빠른 참고
