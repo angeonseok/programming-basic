@@ -12,16 +12,17 @@
 
 | # | 문서 | 핵심 내용 |
 |---|------|-----------|
-| 01 | [기초 문법](./01.cpp_basics.md) | 빠른 입출력, 자료형, **오버플로(long long)**, 연산자, 비트 연산 |
+| 01 | [기초 문법](./01.cpp_basics.md) | **코테 기본 템플릿**, 빠른 입출력, 자료형, **오버플로(long long)**, 연산자 우선순위, 비트 연산, `<cmath>` 함정 |
 | 02 | [제어문](./02.cpp_control_flow.md) | 조건문, 초기화문 `if`, 반복문, 범위 기반 for, **격자 순회·방향 배열(dx/dy)** |
-| 03 | [함수](./03.cpp_functions.md) | 참조 전달(`const&`), 람다, **재귀·DFS·백트래킹**, 여러 값 반환, `optional` |
-| 04 | [문자열](./04.cpp_string.md) | `string`, **문자 산술**, getline·버퍼, **stringstream 파싱**, `string_view` |
-| 05 | [STL 컨테이너](./05.cpp_stl_containers.md) | **vector·map·set·stack·queue·priority_queue**, **구조적 바인딩**, BFS 뼈대 |
-| 06 | [STL 알고리즘](./06.cpp_stl_algorithm.md) | **sort·비교 기준**, **이분 탐색**, 순열, 누적합, `gcd`·`lcm`·`clamp` |
-| 07 | [포인터·메모리](./07.cpp_pointer_memory.md) | 포인터, 참조, 스택 vs 힙, RAII (개념 위주) |
+| 03 | [함수](./03.cpp_functions.md) | 참조 전달(`const&`), 람다·**재귀 람다**, **재귀·DFS·백트래킹**, 여러 값 반환, `optional` |
+| 04 | [문자열](./04.cpp_string.md) | `string`, **문자 산술**, getline·버퍼, **stringstream 파싱**, `string_view`, `from_chars` |
+| 05 | [STL 컨테이너](./05.cpp_stl_containers.md) | **vector·map·set·stack·queue·priority_queue**, **구조적 바인딩**, BFS·다익스트라 뼈대, 반복자 무효화 |
+| 06 | [STL 알고리즘](./06.cpp_stl_algorithm.md) | **sort·비교 기준**, **이분 탐색·파라메트릭 서치**, 순열, **누적합**, erase-remove, `gcd`·`lcm`·`clamp` |
+| 07 | [포인터·메모리](./07.cpp_pointer_memory.md) | **포인터·주소·역참조**, 배열·문자열 리터럴과 포인터, 반복자, 연결 리스트·트리, 참조·lvalue/rvalue, **메모리 영역·수명**, 메모리 버그, 스마트 포인터, 이동 |
 | 08 | [객체 지향](./08.cpp_oop.md) | **struct·정렬 기준(operator<)**, 클래스, 상속, 다형성 |
 | 09 | [템플릿](./09.cpp_template.md) | 함수·클래스 템플릿, CTAD, `if constexpr`, fold expression |
-| 10 | [예외 처리](./10.cpp_exception.md) | try/catch/throw, **런타임 에러(RE) 원인** |
+| 10 | [예외 처리](./10.cpp_exception.md) | try/catch/throw, **런타임 에러(RE) 원인**, 디버깅용 컴파일 옵션 |
+| 11 | [프로그램 구조](./11.cpp_program_structure.md) | 전처리·컴파일·링크, 매크로·**로컬 디버그 출력**, 선언과 정의, 헤더/소스 분리, 네임스페이스·**이름 충돌** |
 
 ## 코딩테스트 빠른 참고
 
@@ -29,3 +30,6 @@
 - **매 문제 세팅:** 빠른 입출력(`01`), `long long` 오버플로 판단(`01`)
 - **탐색 문제:** 방향 배열(`02`) · DFS/백트래킹(`03`) · BFS(`05`)
 - **정렬/탐색:** sort 비교 람다(`06`) · lower_bound 이분 탐색(`06`) · struct operator<(`08`)
+- **최단 거리:** BFS(`05`) · 다익스트라(`05`)
+- **로컬에선 맞는데 RE/WA:** RE 원인 목록과 디버깅 옵션(`10`) · 오버플로(`01`) · 전역 `vector` 크기(`03`)
+- **알 수 없는 컴파일 에러:** `count`·`left` 같은 전역 변수 이름 충돌(`11`) · 에러가 난 단계 읽기(`11`)
